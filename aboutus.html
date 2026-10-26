@@ -1,76 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the five students from Quezon City behind Mug Life.">
   <title>About Us - Mug Life</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body class="inner-page">
 
-<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <header class="navbar">
-    <div class="logo">
-      Mug Life
-    </div>
-
-    <nav>
+    <a href="index.html" class="logo" aria-label="Mug Life home">Mug Life</a>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
-      <a href="aboutus.html">About Us</a>
+      <a href="aboutus.html" aria-current="page">About Us</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-<main class="about-page">
+  <main id="main-content" tabindex="-1">
+    <section class="page-intro" aria-labelledby="about-heading">
+      <p class="small-heading">THE PEOPLE BEHIND THE CUP</p>
+      <h1 id="about-heading">Hello. We're Mug Life.</h1>
+      <p>Five college students, one shared idea, and plenty of reasons to take a coffee break.</p>
+    </section>
 
-  <section class="about-intro">
-    <h1>About Us</h1>
+    <section class="about-story content-width" aria-labelledby="story-heading">
+      <div class="story-copy">
+        <p class="small-heading">OUR STORY</p>
+        <h2 id="story-heading">A small idea with a lot of heart.</h2>
+        <p>
+          We're a team of five college students from Quezon City who came
+          together with a simple idea: a coffee shop where people can enjoy
+          good coffee, good conversations, and a little happiness in their day.
+        </p>
+        <p>
+          As students, we know how busy life can get. Between classes,
+          deadlines, and study sessions, sometimes a short break is all
+          we need. That feeling inspired us to create Mug Life.
+        </p>
+        <p>
+          Whether you're catching up with friends or taking a moment for
+          yourself, we hope our coffee shop can be a welcoming part of your day.
+        </p>
+      </div>
+      <aside class="story-note" aria-label="About our team">
+        <p class="team-count" aria-hidden="true">05</p>
+        <p class="team-caption">Students. One team.</p>
+        <blockquote>Good coffee. Good company. A moment to slow down.</blockquote>
+        <p>A shared dream, built with care and creativity.</p>
+      </aside>
+    </section>
 
-    <p class="about-welcome">
-      Hello and Welcome to Mug Life!
-    </p>
+    <section class="mission-section" aria-labelledby="mission-heading">
+      <p class="small-heading">OUR MISSION</p>
+      <h2 id="mission-heading">Make everyday breaks a little better.</h2>
+      <p>
+        We want to bring people together through good coffee and a welcoming
+        space, while learning and growing together as a team.
+      </p>
+    </section>
 
-    <p>
-      We're a team of five college students from Quezon City who came
-      together with one simple idea: to create a coffee shop where all
-      people can enjoy good coffee, good conversations, and a little
-      happiness in their everyday lives.
-    </p>
+    <section class="about-values content-width" aria-labelledby="values-heading">
+      <div class="section-heading">
+        <p>WHAT MATTERS TO US</p>
+        <h2 id="values-heading">The heart of Mug Life.</h2>
+      </div>
+      <div class="value-grid">
+        <article class="value-item">
+          <p class="value-number" aria-hidden="true">01</p>
+          <h3>Good coffee</h3>
+          <p>Drinks made with care, from a simple iced coffee to a creamy latte.</p>
+        </article>
+        <article class="value-item">
+          <p class="value-number" aria-hidden="true">02</p>
+          <h3>A welcoming space</h3>
+          <p>A place to share a conversation, take a break, and feel at ease.</p>
+        </article>
+        <article class="value-item">
+          <p class="value-number" aria-hidden="true">03</p>
+          <h3>Growing together</h3>
+          <p>Five students supporting each other, learning, and bringing an idea to life.</p>
+        </article>
+      </div>
+    </section>
 
-    <p>
-      As students, we know how busy and stressful life can get. Between
-      classes, deadlines, study sessions, and everything in between,
-      sometimes what we need is a good cup of coffee and a place where
-      we can slow down and relax for a while. That's what inspired us
-      to create Mug Life Coffee Shop.
-    </p>
+    <section class="page-cta" aria-labelledby="about-cta-heading">
+      <p class="small-heading">GET TO KNOW US, ONE CUP AT A TIME</p>
+      <h2 id="about-cta-heading">Find a drink that feels like you.</h2>
+      <div class="cta-links">
+        <a href="products.html" class="primary-button">Explore Our Menu</a>
+        <a href="contact.html" class="secondary-button">Get in Touch</a>
+      </div>
+    </section>
+  </main>
 
-    <p>
-      Mug Life is a small coffee shop created with passion and
-      creativity. Whether you're grabbing coffee before class, studying
-      with friends, taking a break from a busy day, or simply looking
-      for a cozy place to relax, we hope Mug Life can be a place you
-      can visit to make your day a little bit better.
-    </p>
-
-    <p>
-      Behind Mug Life are five students, one team, and a shared dream
-      of creating something meaningful. Every cup we serve is made
-      with our customers in mind, and every bit of your support means
-      so much to us as students who are willing to learn, grow, and
-      chase a dream together.
-    </p>
-  </section>
-
-  <section class="about-contact">
-    <div>
-      <h3>Get in Touch</h3>
-      <p>muglife@gmail.com</p>
-      <p>0912 345 6789</p>
-      <p>@muglifeph</p>
+  <footer>
+    <p class="footer-brand">Mug Life Coffee Shop</p>
+    <div class="footer-links" aria-label="More Mug Life pages">
+      <a href="index.html">Home</a>
+      <a href="products.html">Menu</a>
+      <a href="aboutus.html">Our Story</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </section>
+  </footer>
 
-</main>
+</body>
+</html>
