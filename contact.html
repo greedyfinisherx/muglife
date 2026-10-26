@@ -1,109 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find Mug Life contact details, hours, and answers to common questions.">
   <title>Contact Us - Mug Life</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body class="inner-page">
 
-<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <header class="navbar">
-    <div class="logo">
-      Mug Life
-    </div>
-
-    <nav>
+    <a href="home.html" class="logo" aria-label="Mug Life home">Mug Life</a>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="aboutus.html">About Us</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a>
     </nav>
   </header>
 
-
-  <main class="contact-page">
-
-    <section class="contact-intro">
-
-      <h1>Contact Us</h1>
-
-      <p>
-        Have a question, suggestion, or simply want to say hello?
-        We'd love to hear from you.
-      </p>
-
+  <main id="main-content" tabindex="-1">
+    <section class="page-intro" aria-labelledby="contact-heading">
+      <p class="small-heading">LET'S TALK COFFEE</p>
+      <h1 id="contact-heading">Contact Us</h1>
+      <p>Have a question, a suggestion, or something to share? We'd love to hear from you.</p>
     </section>
 
+    <div class="contact-content content-width">
+      <section class="contact-details" id="contact-details" aria-labelledby="details-heading">
+        <h2 id="details-heading">Get in touch.</h2>
+        <p>Find our contact details and opening hours below.</p>
+        <dl class="contact-list">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:muglife@gmail.com">muglife@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+639123456789">0912 345 6789</a></dd>
+          </div>
+          <div>
+            <dt>Social handle</dt>
+            <dd>@muglifeph</dd>
+          </div>
+          <div>
+            <dt>Opening hours</dt>
+            <dd>Monday &ndash; Sunday<br>7:00 AM &ndash; 9:00 PM</dd>
+          </div>
+          <div>
+            <dt>Our location</dt>
+            <dd>Exact caf&eacute; address to be announced.</dd>
+          </div>
+        </dl>
+      </section>
 
-    <section class="contact-content">
-
-      <div class="contact-details">
-
-        <h2>Get in Touch</h2>
-
-        <p>
-          We'd be happy to hear from you. Reach out to Mug Life
-          through any of the following:
+      <section class="contact-form" aria-labelledby="form-heading">
+        <h2 id="form-heading">Write to Mug Life.</h2>
+        <p id="form-note" class="form-note">
+          This school-project form previews your message. Nothing is sent.
+          To contact us, use the email link above.
         </p>
+        <form id="contact-preview" aria-describedby="form-note">
+          <label for="name">Name <span>(required)</span></label>
+          <input type="text" id="name" name="name" placeholder="Your name"
+            autocomplete="name" maxlength="80" required>
 
-        <div class="contact-item">
-          <h3>Email</h3>
-          <p>muglife@gmail.com</p>
-        </div>
+          <label for="email">Email <span>(required)</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com"
+            autocomplete="email" maxlength="254" required>
 
-        <div class="contact-item">
-          <h3>Phone</h3>
-          <p>0912 345 6789</p>
-        </div>
+          <label for="subject">Topic <span>(required)</span></label>
+          <select id="subject" name="subject" required>
+            <option value="" selected disabled>Choose a topic</option>
+            <option>Menu question</option>
+            <option>General inquiry</option>
+            <option>Feedback</option>
+          </select>
 
-        <div class="contact-item">
-          <h3>Social Media</h3>
-          <p>@muglifeph</p>
-        </div>
+          <label for="message">Message <span>(required)</span></label>
+          <textarea id="message" name="message" rows="6" maxlength="1000"
+            placeholder="What would you like to tell us?" aria-describedby="message-help" required></textarea>
+          <p id="message-help" class="field-help">Up to 1,000 characters.</p>
 
-        <div class="contact-item">
-          <h3>Opening Hours</h3>
-          <p>Monday - Sunday</p>
-          <p>7:00 AM - 9:00 PM</p>
-        </div>
-
-      </div>
-
-
-      <div class="contact-form">
-
-        <h2>Send Us a Message</h2>
-
-        <form>
-
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name">
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your email">
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6"
-            placeholder="Write your message here"></textarea>
-
-          <button type="submit">Send Message</button>
-
+          <div class="form-buttons">
+            <button type="submit" id="preview-button" class="primary-button" disabled>Preview Message</button>
+            <button type="reset" class="clear-button">Clear Form</button>
+          </div>
+          <noscript><p class="form-note">Enable JavaScript to preview a message, or use the email link.</p></noscript>
         </form>
 
-      </div>
+        <section id="message-preview" class="message-preview" tabindex="-1"
+          aria-labelledby="preview-heading" aria-live="polite" hidden>
+          <h3 id="preview-heading">Your message preview</h3>
+          <p id="preview-from"></p>
+          <p id="preview-topic"></p>
+          <p id="preview-message" class="preview-message"></p>
+          <p class="preview-notice">Preview only. No message has been sent.</p>
+        </section>
+      </section>
+    </div>
 
+    <section class="faq content-width" id="faq" aria-labelledby="faq-heading">
+      <p class="small-heading">BEFORE YOU ASK</p>
+      <h2 id="faq-heading">A few quick answers.</h2>
+      <details>
+        <summary>What are your opening hours?</summary>
+        <p>Our listed hours are Monday to Sunday, 7:00 AM to 9:00 PM.</p>
+      </details>
+      <details>
+        <summary>Where can I see your drinks and prices?</summary>
+        <p>Visit our <a href="products.html">Products page</a> for drinks, sample prices, sizes, and ingredients.</p>
+      </details>
+      <details>
+        <summary>Do you have a drink without coffee?</summary>
+        <p>Yes. Our <a href="products.html#matcha-latte">Matcha Latte</a> uses matcha and milk instead of espresso.</p>
+      </details>
+      <details>
+        <summary>How can I ask about ingredients?</summary>
+        <p>Email <a href="mailto:muglife@gmail.com">muglife@gmail.com</a> or call
+          <a href="tel:+639123456789">0912 345 6789</a> before choosing your drink.</p>
+      </details>
     </section>
-
   </main>
 
-
   <footer>
-    <p>Mug Life Coffee Shop</p>
+    <p class="footer-brand">Mug Life Coffee Shop</p>
+    <div class="footer-links" aria-label="More Mug Life pages">
+      <a href="index.html">Home</a>
+      <a href="products.html">Menu</a>
+      <a href="aboutus.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </footer>
 
-</body>
+  <script>
+    const form = document.getElementById('contact-preview');
+    const preview = document.getElementById('message-preview');
 
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      document.getElementById('preview-from').textContent =
+        'From: ' + form.elements.name.value + ' (' + form.elements.email.value + ')';
+      document.getElementById('preview-topic').textContent =
+        'Topic: ' + form.elements.subject.value;
+      document.getElementById('preview-message').textContent = form.elements.message.value;
+      preview.hidden = false;
+      preview.focus();
+    });
+
+    form.addEventListener('reset', function () {
+      preview.hidden = true;
+    });
+
+    document.getElementById('preview-button').disabled = false;
+  </script>
+</body>
 </html>
