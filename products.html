@@ -1,173 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Mug Life drinks, sample prices, sizes, and ingredients.">
   <title>Products - Mug Life</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body class="inner-page">
 
-<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <!-- NAVIGATION -->
   <header class="navbar">
-    <div class="logo">
-      Mug Life
-    </div>
-
-    <nav>
+    <a href="index.html" class="logo" aria-label="Mug Life home">Mug Life</a>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
+      <a href="products.html" aria-current="page">Products</a>
       <a href="aboutus.html">About Us</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-
-  <main class="products-page">
-
-    <!-- PAGE INTRO -->
-    <section class="products-intro">
-
-      <p>THE MUG LIFE MENU</p>
-
-      <h1>Find your perfect cup.</h1>
-
-      <p class="products-description">
-        From creamy lattes to bold iced coffee,
-        there's always something worth trying at Mug Life.
-      </p>
-
+  <main id="main-content" tabindex="-1">
+    <section class="page-intro" aria-labelledby="menu-heading">
+      <p class="small-heading">THE MUG LIFE MENU</p>
+      <h1 id="menu-heading">Find your perfect cup.</h1>
+      <p>From creamy lattes to bold iced coffee, there's always something worth trying at Mug Life.</p>
+      <nav class="menu-categories" aria-label="Drink categories">
+        <a href="#coffee-menu">Coffee <span>8 drinks</span></a>
+        <a href="#non-coffee-menu">Non-Coffee <span>1 drink</span></a>
+      </nav>
+      <p class="menu-sample-note">Sample prices, sizes, and recipes for our school project.</p>
     </section>
 
-
-    <!-- PRODUCTS -->
-    <section class="products">
-
-      <div class="product">
-        <img src="spanishlatte.png" alt="Spanish Latte">
-
-        <div class="product-info">
-          <h2>Spanish Latte</h2>
-          <p>
-            Smooth espresso with creamy milk and
-            a touch of sweetness.
-          </p>
+    <div class="menu-content">
+      <section class="category-group" id="coffee-menu" aria-labelledby="coffee-heading">
+        <div class="category-heading">
+          <h2 id="coffee-heading">Coffee</h2>
+          <p>Find a familiar favorite or try a new flavor.</p>
         </div>
-      </div>
+        <div class="products">
+        <article class="product" id="spanish-latte" aria-labelledby="spanish-latte-heading">
+          <div class="product-image">
+            <img src="spanishlatte.png" alt="Spanish Latte" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Hot or iced</p>
+              <span class="product-badge">House Favorite</span>
+            </div>
+            <h3 id="spanish-latte-heading">Spanish Latte</h3>
+            <p class="product-description">Smooth espresso with creamy milk and a touch of sweetness.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;120</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;140</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, milk, and condensed milk. A creamy, sweet coffee.</p>
+            </details>
+          </div>
+        </article>
 
+        <article class="product" id="coconut-latte" aria-labelledby="coconut-latte-heading">
+          <div class="product-image">
+            <img src="coconutlatte.png" alt="Coconut Latte" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Hot or iced</p>
+              
+            </div>
+            <h3 id="coconut-latte-heading">Coconut Latte</h3>
+            <p class="product-description">A creamy latte with a refreshing coconut flavor.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;130</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;150</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, milk, and coconut-flavored syrup. Creamy with a tropical twist.</p>
+            </details>
+          </div>
+        </article>
 
-      <div class="product">
-        <img src="coconutlatte.png" alt="Coconut Latte">
+        <article class="product" id="caramel-macchiato" aria-labelledby="caramel-macchiato-heading">
+          <div class="product-image">
+            <img src="caramelmacchiato.png" alt="Caramel Macchiato" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Hot or iced</p>
+              <span class="product-badge">House Favorite</span>
+            </div>
+            <h3 id="caramel-macchiato-heading">Caramel Macchiato</h3>
+            <p class="product-description">Rich espresso, creamy milk, and a caramel finish.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;135</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;155</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, milk, vanilla syrup, and caramel drizzle. Rich and sweet.</p>
+            </details>
+          </div>
+        </article>
 
-        <div class="product-info">
-          <h2>Coconut Latte</h2>
-          <p>
-            A creamy latte with a refreshing
-            coconut flavor.
-          </p>
+        <article class="product" id="iced-americano" aria-labelledby="iced-americano-heading">
+          <div class="product-image">
+            <img src="icedamericano.png" alt="Iced Americano" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Iced</p>
+              
+            </div>
+            <h3 id="iced-americano-heading">Iced Americano</h3>
+            <p class="product-description">Bold espresso over ice for a refreshing coffee break.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;90</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;110</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, water, and ice. A bold coffee served without milk in this recipe.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="product" id="vanilla-latte" aria-labelledby="vanilla-latte-heading">
+          <div class="product-image">
+            <img src="vanillalatte.png" alt="Vanilla Latte" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Hot or iced</p>
+              
+            </div>
+            <h3 id="vanilla-latte-heading">Vanilla Latte</h3>
+            <p class="product-description">Espresso and milk with a gentle vanilla sweetness.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;120</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;140</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, milk, and vanilla syrup. Smooth, creamy, and lightly sweet.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="product" id="cafe-mocha" aria-labelledby="cafe-mocha-heading">
+          <div class="product-image">
+            <img src="images/cafemocha.png" alt="Cafe Mocha" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Hot or iced</p>
+              
+            </div>
+            <h3 id="cafe-mocha-heading">Cafe Mocha</h3>
+            <p class="product-description">A comforting blend of espresso, chocolate, and milk.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;130</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;150</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, milk, and chocolate sauce. A rich coffee with a chocolate flavor.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="product" id="salted-caramel-latte" aria-labelledby="salted-caramel-latte-heading">
+          <div class="product-image">
+            <img src="saltedcaramel.png" alt="Salted Caramel Latte" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Hot or iced</p>
+              
+            </div>
+            <h3 id="salted-caramel-latte-heading">Salted Caramel Latte</h3>
+            <p class="product-description">Creamy espresso with sweet caramel and a hint of salt.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;135</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;155</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, milk, and salted caramel syrup. Sweet with a lightly salty finish.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="product" id="iced-cappuccino" aria-labelledby="iced-cappuccino-heading">
+          <div class="product-image">
+            <img src="icedcapuccino.png" alt="Iced Cappuccino" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Iced</p>
+              
+            </div>
+            <h3 id="iced-cappuccino-heading">Iced Cappuccino</h3>
+            <p class="product-description">Chilled espresso with creamy milk and a foamy finish.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;120</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;140</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Espresso, milk, ice, and milk foam. A refreshing, creamy coffee.</p>
+            </details>
+          </div>
+        </article>
         </div>
-      </div>
+      </section>
 
-
-      <div class="product">
-        <img src="caramelmacchiato.png" alt="Caramel Macchiato">
-
-        <div class="product-info">
-          <h2>Caramel Macchiato</h2>
-          <p>
-            Rich espresso, steamed milk, and
-            caramel blended together.
-          </p>
+      <section class="category-group" id="non-coffee-menu" aria-labelledby="non-coffee-heading">
+        <div class="category-heading">
+          <h2 id="non-coffee-heading">Non-Coffee</h2>
+          <p>A creamy matcha option for a different kind of break.</p>
         </div>
-      </div>
-
-
-      <div class="product">
-        <img src="icedamericano.png" alt="Iced Americano">
-
-        <div class="product-info">
-          <h2>Iced Americano</h2>
-          <p>
-            Bold espresso served over ice
-            for a refreshing drink.
-          </p>
+        <div class="products products-single">
+        <article class="product" id="matcha-latte" aria-labelledby="matcha-latte-heading">
+          <div class="product-image">
+            <img src="matchalatte.png" alt="Matcha Latte" width="240" height="240" loading="lazy"
+              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <p class="drink-serving">Hot or iced</p>
+              
+            </div>
+            <h3 id="matcha-latte-heading">Matcha Latte</h3>
+            <p class="product-description">Smooth matcha combined with creamy milk.</p>
+            <dl class="product-prices">
+              <div>
+                <dt>Regular <span>12 oz</span></dt>
+                <dd>&#8369;130</dd>
+              </div>
+              <div>
+                <dt>Large <span>16 oz</span></dt>
+                <dd>&#8369;150</dd>
+              </div>
+            </dl>
+            <details class="drink-details">
+              <summary>Ingredients &amp; flavor</summary>
+              <p>Matcha, milk, and a little sugar. Earthy and creamy, with no espresso.</p>
+            </details>
+          </div>
+        </article>
         </div>
+      </section>
+
+      <div class="menu-footnote">
+        <h2>A question about your cup?</h2>
+        <p>Many of these sample recipes use milk. Ask about ingredients and available choices before ordering.</p>
+        <a href="contact.html" class="secondary-button">Ask Us About the Menu</a>
       </div>
-
-
-      <div class="product">
-        <img src="matchalatte.png" alt="Matcha Latte">
-
-        <div class="product-info">
-          <h2>Matcha Latte</h2>
-          <p>
-            Smooth matcha combined with
-            creamy milk.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="product">
-        <img src="vanillalatte.png" alt="Vanilla Latte">
-
-        <div class="product-info">
-          <h2>Vanilla Latte</h2>
-          <p>
-            Espresso and steamed milk with
-            a sweet vanilla flavor.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="product">
-        <img src="cafemocha.png" alt="Cafe Mocha">
-
-        <div class="product-info">
-          <h2>Cafe Mocha</h2>
-          <p>
-            Espresso and chocolate combined
-            with creamy steamed milk.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="product">
-        <img src="saltedcaramel.png" alt="Salted Caramel Latte">
-
-        <div class="product-info">
-          <h2>Salted Caramel Latte</h2>
-          <p>
-            Creamy espresso with sweet caramel
-            and a hint of salt.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="product">
-        <img src="icedcapuccino.png" alt="Iced Cappuccino">
-
-        <div class="product-info">
-          <h2>Iced Cappuccino</h2>
-          <p>
-            Chilled espresso with creamy milk
-            and a smooth finish.
-          </p>
-        </div>
-      </div>
-
-    </section>
-
+    </div>
   </main>
 
-
   <footer>
-    <p>Mug Life Coffee Shop</p>
+    <p class="footer-brand">Mug Life Coffee Shop</p>
+    <div class="footer-links" aria-label="More Mug Life pages">
+      <a href="index.html">Home</a>
+      <a href="products.html">Menu</a>
+      <a href="aboutus.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </footer>
 
 </body>
