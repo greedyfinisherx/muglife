@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Mug Life drinks, sample prices, sizes, and ingredients.">
+  <meta name="description" content="Explore Mug Life drinks, sample prices, sizes, and order your cup.">
   <title>Products - Mug Life</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,11 +25,7 @@
     <section class="page-intro" aria-labelledby="menu-heading">
       <p class="small-heading">THE MUG LIFE MENU</p>
       <h1 id="menu-heading">Find your perfect cup.</h1>
-      <p>From creamy lattes to bold iced coffee, there's always something worth trying at Mug Life.</p>
-      <nav class="menu-categories" aria-label="Drink categories">
-        <a href="#coffee-menu">Coffee <span>8 drinks</span></a>
-        <a href="#non-coffee-menu">Non-Coffee <span>1 drink</span></a>
-      </nav>
+      <p>From creamy lattes to bold iced coffee, select your favorites and place your order below.</p>
     </section>
 
     <div class="menu-content">
@@ -39,294 +35,262 @@
           <p>Find a familiar favorite or try a new flavor.</p>
         </div>
         <div class="products">
-        <article class="product" id="spanish-latte" aria-labelledby="spanish-latte-heading">
-          <div class="product-image">
-            <img src="spanishlatte.png" alt="Spanish Latte" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Hot or iced</p>
-              <span class="product-badge">House Favorite</span>
-            </div>
-            <h3 id="spanish-latte-heading">Spanish Latte</h3>
-            <p class="product-description">Smooth espresso with creamy milk and a touch of sweetness.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;120</dd>
-              </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;140</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, milk, and condensed milk. A creamy, sweet coffee.</p>
-            </details>
-          </div>
-        </article>
 
-        <article class="product" id="coconut-latte" aria-labelledby="coconut-latte-heading">
-          <div class="product-image">
-            <img src="coconutlatte.png" alt="Coconut Latte" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Hot or iced</p>
-              
+          <article class="product" id="spanish-latte">
+            <div class="product-image">
+              <img src="spanishlatte.png" alt="Spanish Latte" width="240" height="240" loading="lazy">
             </div>
-            <h3 id="coconut-latte-heading">Coconut Latte</h3>
-            <p class="product-description">A creamy latte with a refreshing coconut flavor.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;130</dd>
+            <div class="product-info">
+              <h3>Spanish Latte</h3>
+              <p class="product-description">Smooth espresso with creamy milk and condensed milk.</p>
+              <div class="product-prices">
+                <div>
+                  <dt>Regular (12 oz)</dt>
+                  <dd>₱120</dd>
+                  <button class="add-btn" data-name="Spanish Latte - Regular" data-price="120">Add to Order</button>
+                </div>
+                <div>
+                  <dt>Large (16 oz)</dt>
+                  <dd>₱140</dd>
+                  <button class="add-btn" data-name="Spanish Latte - Large" data-price="140">Add to Order</button>
+                </div>
               </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;150</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, milk, and coconut-flavored syrup. Creamy with a tropical twist.</p>
-            </details>
-          </div>
-        </article>
+            </div>
+          </article>
 
-        <article class="product" id="caramel-macchiato" aria-labelledby="caramel-macchiato-heading">
-          <div class="product-image">
-            <img src="caramelmacchiato.png" alt="Caramel Macchiato" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Hot or iced</p>
-              <span class="product-badge">House Favorite</span>
+          <article class="product" id="coconut-latte">
+            <div class="product-image">
+              <img src="coconutlatte.png" alt="Coconut Latte" width="240" height="240" loading="lazy">
             </div>
-            <h3 id="caramel-macchiato-heading">Caramel Macchiato</h3>
-            <p class="product-description">Rich espresso, creamy milk, and a caramel finish.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;135</dd>
+            <div class="product-info">
+              <h3>Coconut Latte</h3>
+              <p class="product-description">Creamy latte with a refreshing coconut flavor.</p>
+              <div class="product-prices">
+                <div>
+                  <dt>Regular (12 oz)</dt>
+                  <dd>₱130</dd>
+                  <button class="add-btn" data-name="Coconut Latte - Regular" data-price="130">Add to Order</button>
+                </div>
+                <div>
+                  <dt>Large (16 oz)</dt>
+                  <dd>₱150</dd>
+                  <button class="add-btn" data-name="Coconut Latte - Large" data-price="150">Add to Order</button>
+                </div>
               </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;155</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, milk, vanilla syrup, and caramel drizzle. Rich and sweet.</p>
-            </details>
-          </div>
-        </article>
+            </div>
+          </article>
 
-        <article class="product" id="iced-americano" aria-labelledby="iced-americano-heading">
-          <div class="product-image">
-            <img src="icedamericano.png" alt="Iced Americano" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Iced</p>
-              
+          <article class="product" id="caramel-macchiato">
+            <div class="product-image">
+              <img src="caramelmacchiato.png" alt="Caramel Macchiato" width="240" height="240" loading="lazy">
             </div>
-            <h3 id="iced-americano-heading">Iced Americano</h3>
-            <p class="product-description">Bold espresso over ice for a refreshing coffee break.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;90</dd>
+            <div class="product-info">
+              <h3>Caramel Macchiato</h3>
+              <p class="product-description">Rich espresso with steamed milk and caramel drizzle.</p>
+              <div class="product-prices">
+                <div>
+                  <dt>Regular (12 oz)</dt>
+                  <dd>₱135</dd>
+                  <button class="add-btn" data-name="Caramel Macchiato - Regular" data-price="135">Add to Order</button>
+                </div>
+                <div>
+                  <dt>Large (16 oz)</dt>
+                  <dd>₱155</dd>
+                  <button class="add-btn" data-name="Caramel Macchiato - Large" data-price="155">Add to Order</button>
+                </div>
               </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;110</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, water, and ice. A bold coffee served without milk in this recipe.</p>
-            </details>
-          </div>
-        </article>
+            </div>
+          </article>
 
-        <article class="product" id="vanilla-latte" aria-labelledby="vanilla-latte-heading">
-          <div class="product-image">
-            <img src="vanillalatte.png" alt="Vanilla Latte" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Hot or iced</p>
-              
+          <article class="product" id="iced-americano">
+            <div class="product-image">
+              <img src="icedamericano.png" alt="Iced Americano" width="240" height="240" loading="lazy">
             </div>
-            <h3 id="vanilla-latte-heading">Vanilla Latte</h3>
-            <p class="product-description">Espresso and milk with a gentle vanilla sweetness.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;120</dd>
+            <div class="product-info">
+              <h3>Iced Americano</h3>
+              <p class="product-description">Bold espresso over ice.</p>
+              <div class="product-prices">
+                <div>
+                  <dt>Regular (12 oz)</dt>
+                  <dd>₱90</dd>
+                  <button class="add-btn" data-name="Iced Americano - Regular" data-price="90">Add to Order</button>
+                </div>
+                <div>
+                  <dt>Large (16 oz)</dt>
+                  <dd>₱110</dd>
+                  <button class="add-btn" data-name="Iced Americano - Large" data-price="110">Add to Order</button>
+                </div>
               </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;140</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, milk, and vanilla syrup. Smooth, creamy, and lightly sweet.</p>
-            </details>
-          </div>
-        </article>
+            </div>
+          </article>
 
-        <article class="product" id="cafe-mocha" aria-labelledby="cafe-mocha-heading">
-          <div class="product-image">
-            <img src="cafemocha.png" alt="Cafe Mocha" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Hot or iced</p>
-              
-            </div>
-            <h3 id="cafe-mocha-heading">Cafe Mocha</h3>
-            <p class="product-description">A comforting blend of espresso, chocolate, and milk.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;130</dd>
-              </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;150</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, milk, and chocolate sauce. A rich coffee with a chocolate flavor.</p>
-            </details>
-          </div>
-        </article>
-
-        <article class="product" id="salted-caramel-latte" aria-labelledby="salted-caramel-latte-heading">
-          <div class="product-image">
-            <img src="saltedcaramel.png" alt="Salted Caramel Latte" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Hot or iced</p>
-              
-            </div>
-            <h3 id="salted-caramel-latte-heading">Salted Caramel Latte</h3>
-            <p class="product-description">Creamy espresso with sweet caramel and a hint of salt.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;135</dd>
-              </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;155</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, milk, and salted caramel syrup. Sweet with a lightly salty finish.</p>
-            </details>
-          </div>
-        </article>
-
-        <article class="product" id="iced-cappuccino" aria-labelledby="iced-cappuccino-heading">
-          <div class="product-image">
-            <img src="icedcapuccino.png" alt="Iced Cappuccino" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Iced</p>
-              
-            </div>
-            <h3 id="iced-cappuccino-heading">Iced Cappuccino</h3>
-            <p class="product-description">Chilled espresso with creamy milk and a foamy finish.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;120</dd>
-              </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;140</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Espresso, milk, ice, and milk foam. A refreshing, creamy coffee.</p>
-            </details>
-          </div>
-        </article>
         </div>
       </section>
 
-      <section class="category-group" id="non-coffee-menu" aria-labelledby="non-coffee-heading">
-        <div class="category-heading">
-          <h2 id="non-coffee-heading">Non-Coffee</h2>
-          <p>A creamy matcha option for a different kind of break.</p>
+      <!-- ORDER SUMMARY & COMPUTATION -->
+      <section class="order-section" id="order">
+        <h2>Your Order</h2>
+        <div id="order-items"></div>
+        <p id="empty-order">No items selected yet.</p>
+        <hr>
+
+        <p><strong>Subtotal:</strong> ₱<span id="subtotal">0.00</span></p>
+        <p id="discount-line"><strong>Discount (10% if ≥ ₱500):</strong> -₱<span id="discount">0.00</span></p>
+        <p><strong>Total Amount Due:</strong> ₱<span id="total-due">0.00</span></p>
+
+        <div class="payment-section">
+          <label>Amount Tendered: ₱</label>
+          <input type="number" id="cash-input" min="0" step="1" placeholder="Enter cash amount">
+          <button id="compute-btn">Compute Change</button>
+          <p><strong>Change:</strong> ₱<span id="change">0.00</span></p>
         </div>
-        <div class="products products-single">
-        <article class="product" id="matcha-latte" aria-labelledby="matcha-latte-heading">
-          <div class="product-image">
-            <img src="matchalatte.png" alt="Matcha Latte" width="240" height="240" loading="lazy"
-              onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
-          </div>
-          <div class="product-info">
-            <div class="product-topline">
-              <p class="drink-serving">Hot or iced</p>
-              
-            </div>
-            <h3 id="matcha-latte-heading">Matcha Latte</h3>
-            <p class="product-description">Smooth matcha combined with creamy milk.</p>
-            <dl class="product-prices">
-              <div>
-                <dt>Regular <span>12 oz</span></dt>
-                <dd>&#8369;130</dd>
-              </div>
-              <div>
-                <dt>Large <span>16 oz</span></dt>
-                <dd>&#8369;150</dd>
-              </div>
-            </dl>
-            <details class="drink-details">
-              <summary>Ingredients &amp; flavor</summary>
-              <p>Matcha, milk, and a little sugar. Earthy and creamy, with no espresso.</p>
-            </details>
-          </div>
-        </article>
+
+        <button id="receipt-btn">Display Receipt</button>
+        <button id="clear-btn">Clear Order</button>
+
+        <!-- RECEIPT DISPLAY -->
+        <div id="receipt" style="display:none; margin-top:25px; padding:20px; background:#fff8eb; border:2px solid #A56734;">
+          <h3 style="text-align:center;">🧾 MUG LIFE — Official Receipt</h3>
+          <p style="text-align:center;">Quezon City, Philippines</p>
+          <hr>
+          <div id="receipt-items"></div>
+          <hr>
+          <p>Subtotal: ₱<span id="r-subtotal">0.00</span></p>
+          <p>Discount: ₱<span id="r-discount">0.00</span></p>
+          <p><strong>TOTAL: ₱<span id="r-total">0.00</span></strong></p>
+          <p>Cash Received: ₱<span id="r-cash">0.00</span></p>
+          <p>Change: ₱<span id="r-change">0.00</span></p>
+          <hr>
+          <p style="text-align:center; font-style:italic;">Thank you for visiting Mug Life! ☕</p>
         </div>
       </section>
-
-      <div class="menu-footnote">
-        <h2>A question about your cup?</h2>
-        <p>Many of these sample recipes use milk. Ask about ingredients and available choices before ordering.</p>
-        <a href="contact.html" class="secondary-button">Ask Us About the Menu</a>
-      </div>
     </div>
   </main>
 
   <footer>
     <p class="footer-brand">Mug Life Coffee Shop</p>
-    <div class="footer-links" aria-label="More Mug Life pages">
+    <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="products.html">Menu</a>
       <a href="aboutus.html">Our Story</a>
       <a href="contact.html">Contact</a>
     </div>
   </footer>
+
+  <script>
+    let cart = [];
+
+    // Add to order
+    document.querySelectorAll('.add-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.name;
+        const price = parseFloat(btn.dataset.price);
+        cart.push({ name, price });
+        updateOrder();
+      });
+    });
+
+    function updateOrder() {
+      const container = document.getElementById('order-items');
+      const emptyMsg = document.getElementById('empty-order');
+      
+      if (cart.length === 0) {
+        container.innerHTML = '';
+        emptyMsg.style.display = 'block';
+      } else {
+        emptyMsg.style.display = 'none';
+        container.innerHTML = cart.map((item, i) => 
+          `<p>${i+1}. ${item.name} — ₱${item.price.toFixed(2)}</p>`
+        ).join('');
+      }
+
+      const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+      const discount = subtotal >= 500 ? subtotal * 0.10 : 0;
+      const total = subtotal - discount;
+
+      document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+      document.getElementById('discount').textContent = discount.toFixed(2);
+      document.getElementById('total-due').textContent = total.toFixed(2);
+    }
+
+    // Compute change
+    document.getElementById('compute-btn').addEventListener('click', () => {
+      const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+      const discount = subtotal >= 500 ? subtotal * 0.10 : 0;
+      const total = subtotal - discount;
+      const cash = parseFloat(document.getElementById('cash-input').value) || 0;
+      const change = cash - total;
+
+      document.getElementById('change').textContent = change.toFixed(2);
+    });
+
+    // Display Receipt
+    document.getElementById('receipt-btn').addEventListener('click', () => {
+      const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+      const discount = subtotal >= 500 ? subtotal * 0.10 : 0;
+      const total = subtotal - discount;
+      const cash = parseFloat(document.getElementById('cash-input').value) || 0;
+      const change = cash - total;
+
+      document.getElementById('receipt-items').innerHTML = 
+        cart.map((item, i) => `<p>${i+1}. ${item.name} — ₱${item.price.toFixed(2)}</p>`).join('');
+      
+      document.getElementById('r-subtotal').textContent = subtotal.toFixed(2);
+      document.getElementById('r-discount').textContent = discount.toFixed(2);
+      document.getElementById('r-total').textContent = total.toFixed(2);
+      document.getElementById('r-cash').textContent = cash.toFixed(2);
+      document.getElementById('r-change').textContent = change.toFixed(2);
+
+      document.getElementById('receipt').style.display = 'block';
+    });
+
+    // Clear Order
+    document.getElementById('clear-btn').addEventListener('click', () => {
+      cart = [];
+      updateOrder();
+      document.getElementById('cash-input').value = '';
+      document.getElementById('change').textContent = '0.00';
+      document.getElementById('receipt').style.display = 'none';
+    });
+  </script>
+
+  <style>
+    .add-btn {
+      padding: 8px 16px;
+      background: #A56734;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    .add-btn:hover { background: #A05135; }
+    .order-section {
+      margin-top: 50px;
+      padding: 25px;
+      background: #f7e8cc;
+      border-radius: 10px;
+    }
+    .payment-section { margin: 15px 0; }
+    #cash-input {
+      padding: 10px;
+      width: 150px;
+      margin: 0 8px;
+      border: 1px solid #A56734;
+    }
+    #compute-btn, #receipt-btn, #clear-btn {
+      padding: 10px 20px;
+      background: #A56734;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 5px;
+    }
+    #clear-btn { background: #70523d; }
+  </style>
 
 </body>
 </html>
