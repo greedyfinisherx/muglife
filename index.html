@@ -4,225 +4,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Mug Life, a coffee shop concept created by five college students. Explore our favorite drinks and our story.">
   <title>Mug Life - Coffee Shop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="home-page">
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- NAVIGATION -->
   <header class="navbar">
-    <div class="logo">
-      Mug Life
-    </div>
+    <a href="home.html" class="logo" aria-label="Mug Life home">Mug Life</a>
 
-    <nav>
-      <a href="index.html">Home</a>
+    <nav aria-label="Main navigation">
+      <a href="home.html" aria-current="page">Home</a>
       <a href="products.html">Products</a>
       <a href="aboutus.html">About Us</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-
-  <main>
+  <main id="main-content" tabindex="-1">
 
     <!-- HERO -->
-    <section class="hero">
-
+    <section class="hero" aria-labelledby="welcome-heading">
       <div class="hero-content">
-
         <p class="small-heading">WELCOME TO MUG LIFE</p>
-
-        <h1>
-          Your day starts<br>
-          with a good cup.
-        </h1>
-
+        <h1 id="welcome-heading">Your day starts with a good cup.</h1>
         <p class="hero-description">
-          Freshly brewed coffee, cozy moments, and flavors
-          made to keep you going.
+          Created by five college students, Mug Life is a place for
+          good coffee, study breaks, and catching up with friends.
         </p>
-
         <div class="hero-buttons">
           <a href="products.html" class="primary-button">Explore Our Menu</a>
           <a href="aboutus.html" class="secondary-button">Our Story</a>
         </div>
-
       </div>
-
 
       <div class="hero-coffee">
-
-        <div class="coffee-circle">
+        <!-- This cup is drawn entirely with CSS. -->
+        <div class="coffee-circle" aria-hidden="true">
           <div class="coffee-cup">
-            <div class="coffee">
-            </div>
-
-            <div class="cup-handle">
-            </div>
+            <div class="coffee"></div>
+            <div class="cup-handle"></div>
           </div>
         </div>
-
         <p class="coffee-label">BREWED FRESH DAILY</p>
-
       </div>
-
     </section>
 
-
-    <!-- HIGHLIGHT STRIP -->
-    <section class="highlight">
-
+    <!-- HIGHLIGHTS -->
+    <div class="highlight">
       <div>
         <strong>FRESHLY BREWED</strong>
         <span>Every cup, every day.</span>
       </div>
-
       <div>
         <strong>MADE WITH CARE</strong>
         <span>Quality ingredients.</span>
       </div>
-
       <div>
         <strong>A PLACE TO RELAX</strong>
         <span>Good coffee, good moments.</span>
       </div>
+    </div>
 
-    </section>
-
-
-    <!-- FAVORITES -->
-    <section class="favorites">
-
+    <!-- FAVORITES: each row links to its drink on the Products page. -->
+    <section class="favorites" aria-labelledby="favorites-heading">
       <div class="section-heading">
         <p>THE MUG LIFE FAVORITES</p>
-
-        <h2>
-          Find your<br>
-          new favorite.
-        </h2>
+        <h2 id="favorites-heading">Find your new favorite.</h2>
       </div>
-
 
       <div class="favorite-list">
-
-        <div class="favorite-item">
-          <div class="favorite-number">01</div>
-
+        <a href="products.html#spanish-latte" class="favorite-item">
+          <span class="favorite-number" aria-hidden="true">01</span>
+          <img src="images/spanishlatte.png" alt="" width="120" height="150" loading="lazy"
+            onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
           <div class="favorite-info">
             <h3>Spanish Latte</h3>
-            <p>
-              Smooth espresso, creamy milk, and just the right
-              amount of sweetness.
-            </p>
+            <p>Smooth espresso, creamy milk, and just the right amount of sweetness.</p>
+            <span class="favorite-link-label">View drink</span>
           </div>
-
-          <div class="favorite-arrow">→</div>
-        </div>
-
-
-        <div class="favorite-item">
-          <div class="favorite-number">02</div>
-
-          <div class="favorite-info">
-            <h3>Coconut Latte</h3>
-            <p>
-              A creamy latte with a refreshing coconut flavor
-              for a tropical twist.
-            </p>
-          </div>
-
-          <div class="favorite-arrow">→</div>
-        </div>
-
-
-        <div class="favorite-item">
-          <div class="favorite-number">03</div>
-
-          <div class="favorite-info">
-            <h3>Caramel Macchiato</h3>
-            <p>
-              Rich espresso, steamed milk, and caramel
-              combined into a café classic.
-            </p>
-          </div>
-
-          <div class="favorite-arrow">→</div>
-        </div>
-
-
-        <div class="favorite-item">
-          <div class="favorite-number">04</div>
-
-          <div class="favorite-info">
-            <h3>Iced Americano</h3>
-            <p>
-              Bold espresso over ice for a simple,
-              refreshing coffee break.
-            </p>
-          </div>
-
-          <div class="favorite-arrow">→</div>
-        </div>
-
-      </div>
-
-
-      <a href="products.html" class="menu-button">
-        View Full Menu
-      </a>
-
-    </section>
-
-
-    <!-- BRAND MESSAGE -->
-    <section class="brand-message">
-
-      <div class="brand-message-text">
-
-        <p class="small-heading">MORE THAN JUST COFFEE</p>
-
-        <h2>
-          Take a break.<br>
-          Stay for the moment.
-        </h2>
-
-        <p>
-          Whether you're heading to class, meeting friends,
-          finishing an assignment, or simply looking for a
-          quiet place to breathe, Mug Life is here for you.
-        </p>
-
-        <a href="aboutus.html" class="light-button">
-          Discover Mug Life
+          <span class="favorite-arrow" aria-hidden="true">&rarr;</span>
         </a>
 
+        <a href="products.html#coconut-latte" class="favorite-item">
+          <span class="favorite-number" aria-hidden="true">02</span>
+          <img src="images/coconutlatte.png" alt="" width="120" height="150" loading="lazy"
+            onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          <div class="favorite-info">
+            <h3>Coconut Latte</h3>
+            <p>A creamy latte with a refreshing coconut flavor for a tropical twist.</p>
+            <span class="favorite-link-label">View drink</span>
+          </div>
+          <span class="favorite-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a href="products.html#caramel-macchiato" class="favorite-item">
+          <span class="favorite-number" aria-hidden="true">03</span>
+          <img src="images/caramelmacchiato.png" alt="" width="120" height="150" loading="lazy"
+            onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          <div class="favorite-info">
+            <h3>Caramel Macchiato</h3>
+            <p>Rich espresso, steamed milk, and caramel combined into a caf&eacute; classic.</p>
+            <span class="favorite-link-label">View drink</span>
+          </div>
+          <span class="favorite-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a href="products.html#iced-americano" class="favorite-item">
+          <span class="favorite-number" aria-hidden="true">04</span>
+          <img src="images/icedamericano.png" alt="" width="120" height="150" loading="lazy"
+            onerror="this.onerror=null; this.src='images/drink-placeholder.svg';">
+          <div class="favorite-info">
+            <h3>Iced Americano</h3>
+            <p>Bold espresso over ice for a simple, refreshing coffee break.</p>
+            <span class="favorite-link-label">View drink</span>
+          </div>
+          <span class="favorite-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </div>
 
+      <a href="products.html" class="menu-button">View Full Menu</a>
     </section>
 
+    <!-- OUR STORY -->
+    <section class="brand-message" aria-labelledby="story-heading">
+      <div class="brand-message-text">
+        <p class="small-heading">FIVE STUDENTS. ONE SHARED DREAM.</p>
+        <h2 id="story-heading">Take a break.<br>Stay for the moment.</h2>
+        <p>
+          We're a team of students from Quezon City who know how much
+          a short break can mean during a busy day. We created Mug Life
+          with a simple idea: good coffee and a welcoming place to slow down.
+        </p>
+        <a href="aboutus.html" class="light-button">Meet Mug Life</a>
+      </div>
+    </section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta">
+    <!-- VISIT INFORMATION -->
+    <section class="visit-section" id="visit-us" aria-labelledby="visit-heading">
+      <div class="visit-intro">
+        <p class="small-heading">MAKE TIME FOR A CUP</p>
+        <h2 id="visit-heading">Plan your coffee break.</h2>
+        <p>
+          Find a moment for yourself, bring a friend, or take a break
+          between classes. Here's how to get in touch with Mug Life.
+        </p>
+        <a href="contact.html" class="secondary-button">View Contact Details</a>
+      </div>
 
+      <dl class="visit-details">
+        <div>
+          <dt>Opening hours</dt>
+          <dd>Monday &ndash; Sunday<br>7:00 AM &ndash; 9:00 PM</dd>
+        </div>
+        <div>
+          <dt>Our location</dt>
+          <dd>Exact caf&eacute; address to be announced.</dd>
+        </div>
+        <div>
+          <dt>Get in touch</dt>
+          <dd><a href="mailto:muglife@gmail.com">muglife@gmail.com</a></dd>
+          <dd><a href="tel:+639123456789">0912 345 6789</a></dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- FINAL INVITATION -->
+    <section class="final-cta" aria-labelledby="invitation-heading">
       <p>YOUR NEXT COFFEE BREAK STARTS HERE</p>
-
-      <h2>
-        Come grab a cup.
-      </h2>
-
-      <a href="products.html" class="primary-button">
-        See What We're Brewing
-      </a>
-
+      <h2 id="invitation-heading">Come grab a cup.</h2>
+      <a href="#visit-us" class="primary-button">Visit Us</a>
     </section>
 
   </main>
 
-
   <footer>
-    <p>Mug Life Coffee Shop</p>
+    <p class="footer-brand">Mug Life Coffee Shop</p>
+    <div class="footer-links" aria-label="More Mug Life pages">
+      <a href="home.html">Home</a>
+      <a href="products.html">Menu</a>
+      <a href="aboutus.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </footer>
 
 </body>
