@@ -11,6 +11,8 @@ body {
   min-height: 100vh;
 }
 
+/* NAVIGATION: links wrap on small screens without JavaScript. */
+
 .navbar {
   background-color: #A56734;
   padding: 20px 50px;
