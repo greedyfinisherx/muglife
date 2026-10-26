@@ -127,15 +127,16 @@
         </div>
       </section>
 
-      <!-- ORDER SUMMARY & COMPUTATION -->
       <section class="order-section" id="order">
         <h2>Your Order</h2>
+        <p><strong>Order Number:</strong> #<span id="order-number">1</span></p>
+        <hr>
         <div id="order-items"></div>
         <p id="empty-order">No items selected yet.</p>
         <hr>
 
         <p><strong>Subtotal:</strong> ₱<span id="subtotal">0.00</span></p>
-        <p id="discount-line"><strong>Discount (10% if ≥ ₱500):</strong> -₱<span id="discount">0.00</span></p>
+        <p><strong>Discount (10% if ≥ ₱500):</strong> -₱<span id="discount">0.00</span></p>
         <p><strong>Total Amount Due:</strong> ₱<span id="total-due">0.00</span></p>
 
         <div class="payment-section">
@@ -148,9 +149,9 @@
         <button id="receipt-btn">Display Receipt</button>
         <button id="clear-btn">Clear Order</button>
 
-        <!-- RECEIPT DISPLAY -->
         <div id="receipt" style="display:none; margin-top:25px; padding:20px; background:#fff8eb; border:2px solid #A56734;">
           <h3 style="text-align:center;">🧾 MUG LIFE — Official Receipt</h3>
+          <p style="text-align:center;"><strong>Order No:</strong> #<span id="r-order-number">1</span></p>
           <p style="text-align:center;">Quezon City, Philippines</p>
           <hr>
           <div id="receipt-items"></div>
@@ -179,8 +180,13 @@
 
   <script>
     let cart = [];
+    let orderCounter = 1;
 
-    // Add to order
+    function updateOrderNumberDisplay() {
+      document.getElementById('order-number').textContent = orderCounter;
+      document.getElementById('r-order-number').textContent = orderCounter;
+    }
+
     document.querySelectorAll('.add-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const name = btn.dataset.name;
@@ -211,20 +217,19 @@
       document.getElementById('subtotal').textContent = subtotal.toFixed(2);
       document.getElementById('discount').textContent = discount.toFixed(2);
       document.getElementById('total-due').textContent = total.toFixed(2);
+      
+      updateOrderNumberDisplay();
     }
 
-    // Compute change
     document.getElementById('compute-btn').addEventListener('click', () => {
       const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
       const discount = subtotal >= 500 ? subtotal * 0.10 : 0;
       const total = subtotal - discount;
       const cash = parseFloat(document.getElementById('cash-input').value) || 0;
       const change = cash - total;
-
       document.getElementById('change').textContent = change.toFixed(2);
     });
 
-    // Display Receipt
     document.getElementById('receipt-btn').addEventListener('click', () => {
       const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
       const discount = subtotal >= 500 ? subtotal * 0.10 : 0;
@@ -240,18 +245,19 @@
       document.getElementById('r-total').textContent = total.toFixed(2);
       document.getElementById('r-cash').textContent = cash.toFixed(2);
       document.getElementById('r-change').textContent = change.toFixed(2);
-
       document.getElementById('receipt').style.display = 'block';
     });
 
-    // Clear Order
     document.getElementById('clear-btn').addEventListener('click', () => {
       cart = [];
+      orderCounter++;
       updateOrder();
       document.getElementById('cash-input').value = '';
       document.getElementById('change').textContent = '0.00';
       document.getElementById('receipt').style.display = 'none';
     });
+
+    updateOrderNumberDisplay();
   </script>
 
   <style>
